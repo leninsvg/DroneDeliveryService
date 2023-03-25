@@ -1,0 +1,12 @@
+/Users/leninsvg/Projects/DroneDeliveryService/DroneDeliveryService.Models/bin/Debug/net6.0/DroneDeliveryService.Models.deps.json
+/Users/leninsvg/Projects/DroneDeliveryService/DroneDeliveryService.Models/bin/Debug/net6.0/DroneDeliveryService.Models.dll
+/Users/leninsvg/Projects/DroneDeliveryService/DroneDeliveryService.Models/bin/Debug/net6.0/DroneDeliveryService.Models.pdb
+/Users/leninsvg/Projects/DroneDeliveryService/DroneDeliveryService.Models/obj/Debug/net6.0/DroneDeliveryService.Models.csproj.AssemblyReference.cache
+/Users/leninsvg/Projects/DroneDeliveryService/DroneDeliveryService.Models/obj/Debug/net6.0/DroneDeliveryService.Models.GeneratedMSBuildEditorConfig.editorconfig
+/Users/leninsvg/Projects/DroneDeliveryService/DroneDeliveryService.Models/obj/Debug/net6.0/DroneDeliveryService.Models.AssemblyInfoInputs.cache
+/Users/leninsvg/Projects/DroneDeliveryService/DroneDeliveryService.Models/obj/Debug/net6.0/DroneDeliveryService.Models.AssemblyInfo.cs
+/Users/leninsvg/Projects/DroneDeliveryService/DroneDeliveryService.Models/obj/Debug/net6.0/DroneDeliveryService.Models.csproj.CoreCompileInputs.cache
+/Users/leninsvg/Projects/DroneDeliveryService/DroneDeliveryService.Models/obj/Debug/net6.0/DroneDeliveryService.Models.dll
+/Users/leninsvg/Projects/DroneDeliveryService/DroneDeliveryService.Models/obj/Debug/net6.0/refint/DroneDeliveryService.Models.dll
+/Users/leninsvg/Projects/DroneDeliveryService/DroneDeliveryService.Models/obj/Debug/net6.0/DroneDeliveryService.Models.pdb
+/Users/leninsvg/Projects/DroneDeliveryService/DroneDeliveryService.Models/obj/Debug/net6.0/ref/DroneDeliveryService.Models.dll
