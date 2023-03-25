@@ -24,7 +24,7 @@ public class DeliveryService : IDeliveryService
             Trips = new List<TripModel>()
         }).OrderByDescending(delivery => delivery.Drone.Weight).ToList();
         this.SetDeliveryTrips(deliveries, locations);
-        return deliveries;
+        return this.OptimizeDelivery(deliveries);
     }
 
     public (List<DroneModel>, List<LocationModel>) ReadFileDronesAndLocations(string textFilePath)
@@ -100,8 +100,9 @@ public class DeliveryService : IDeliveryService
         foreach (var location in locations)
         {
             bool addNewTrip = overWeight && !deliveries.Any(x => x.Trips.LastOrDefault()?.CapacityWeight >= location.Weight);
-            foreach (var delivery in deliveries)
+            for (int i = 0; i < deliveries.Count; i++)
             {
+                DeliveryModel delivery = deliveries[i];
                 TripModel newTrip = new()
                 {
                     CapacityWeight = delivery.Drone.Weight - location.Weight,
@@ -124,6 +125,8 @@ public class DeliveryService : IDeliveryService
                     delivery.Trips.Add(newTrip);
                     break;
                 }
+                if ((i + 1) < deliveries.Count && this.ValidateTripCapacity(deliveries[i + 1], location.Weight))
+                    continue;
                 if (currentTrip.CapacityWeight >= location.Weight)
                 {
                     currentTrip.CapacityWeight -= location.Weight;
@@ -133,6 +136,47 @@ public class DeliveryService : IDeliveryService
                 overWeight = true;
             }
         }
+    }
+
+    private List<DeliveryModel> OptimizeDelivery(List<DeliveryModel> deliveries)
+    {
+        List<DeliveryModel> optimizeDeliveries = deliveries.Select(x => new DeliveryModel()
+        {
+            Drone = x.Drone,
+            DronePosition = x.DronePosition,
+            Trips = new List<TripModel>()
+        }).ToList();
+        
+        for (int i = 0; i < deliveries.Count(); i++)
+        {
+            foreach (var trip in deliveries[i].Trips)
+            {
+                this.SetOptimizedTrip(deliveries, optimizeDeliveries, i, trip);
+            }
+        }
+        return optimizeDeliveries;
+    }
+
+    private void SetOptimizedTrip(List<DeliveryModel> deliveries, List<DeliveryModel> optimizeDeliveries, int deliveryIndex, TripModel trip)
+    {
+        if ((deliveryIndex + 1) < deliveries.Count() && deliveries[deliveryIndex + 1].Drone.Weight >= trip.Locations.Sum(location => location.Weight))
+        {
+            this.SetOptimizedTrip(deliveries, optimizeDeliveries, deliveryIndex + 1, trip);
+        }
+        else
+        {
+            optimizeDeliveries[deliveryIndex].Trips.Add(trip);
+        }
+    }
+
+    private bool ValidateTripCapacity(DeliveryModel delivery, int weight)
+    {
+        TripModel trip = delivery.Trips.LastOrDefault();
+        if (trip == null)
+        {
+            return false;
+        }
+        return trip.CapacityWeight >= weight;
     }
 
     private string RemoveBracesTextValue(string text)
