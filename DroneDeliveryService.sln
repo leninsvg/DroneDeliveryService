@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DroneDeliveryService.Models", "DroneDeliveryService.Models\DroneDeliveryService.Models.csproj", "{82EAF931-A359-4E36-A95B-EBFB2EAB8FFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DroneDeliveryService.Services", "DroneDeliveryService.Services\DroneDeliveryService.Services.csproj", "{9C0E03BB-6E32-4FBA-9D35-6BDBAA87B48B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DroneDeliveryService.Test", "DroneDeliveryService.Test\DroneDeliveryService.Test.csproj", "{10E210CD-526F-488F-9215-9C1E0302DBEF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{82EAF931-A359-4E36-A95B-EBFB2EAB8FFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82EAF931-A359-4E36-A95B-EBFB2EAB8FFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82EAF931-A359-4E36-A95B-EBFB2EAB8FFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82EAF931-A359-4E36-A95B-EBFB2EAB8FFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C0E03BB-6E32-4FBA-9D35-6BDBAA87B48B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C0E03BB-6E32-4FBA-9D35-6BDBAA87B48B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C0E03BB-6E32-4FBA-9D35-6BDBAA87B48B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C0E03BB-6E32-4FBA-9D35-6BDBAA87B48B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10E210CD-526F-488F-9215-9C1E0302DBEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10E210CD-526F-488F-9215-9C1E0302DBEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10E210CD-526F-488F-9215-9C1E0302DBEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10E210CD-526F-488F-9215-9C1E0302DBEF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
