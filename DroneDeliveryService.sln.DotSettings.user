@@ -5,6 +5,7 @@
     &lt;TestId&gt;NUnit3x::10E210CD-526F-488F-9215-9C1E0302DBEF::net6.0::DroneDeliveryService.Test.DroneDeliveryServiceTest.TestReadFileDronesAndLocations&lt;/TestId&gt;
     &lt;TestId&gt;NUnit3x::10E210CD-526F-488F-9215-9C1E0302DBEF::net6.0::DroneDeliveryService.Test.DroneDeliveryServiceTest.Test3&lt;/TestId&gt;
     &lt;TestId&gt;NUnit3x::10E210CD-526F-488F-9215-9C1E0302DBEF::net6.0::DroneDeliveryService.Test.DroneDeliveryServiceTest.Test2&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::10E210CD-526F-488F-9215-9C1E0302DBEF::net6.0::DroneDeliveryService.Test.DroneDeliveryServiceTest.TestGenerateDeliveriesFile&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
 	</wpf:ResourceDictionary>

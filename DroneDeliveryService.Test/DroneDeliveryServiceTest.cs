@@ -114,10 +114,9 @@ public class DroneDeliveryServiceTest
 
 
     [Test]
-    public void TestWriteDeliveryFile()
+    public void TestGenerateDeliveriesFile()
     {
-        var (drones, locations) = this._deliveryService.ReadFileDronesAndLocations("input.txt");
-        var deliveries = this._deliveryService.GenerateDeliveries(drones, locations);
-        this._deliveryService.WriteDeliveryFile(deliveries, "output.txt");
+        this._deliveryService.GenerateDeliveriesFile("input.txt", "output.txt");
+        Assert.True(true);
     }
 }

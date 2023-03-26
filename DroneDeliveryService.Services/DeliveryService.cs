@@ -11,10 +11,18 @@ public interface IDeliveryService
     List<DeliveryModel> GenerateDeliveries(List<DroneModel> drones, List<LocationModel> locations);
     (List<DroneModel>, List<LocationModel>) ReadFileDronesAndLocations(string textFilePath);
     void WriteDeliveryFile(List<DeliveryModel> deliveries, string textFilePath);
+    void GenerateDeliveriesFile(string dronesAndLocationsFilePath, string deliveryResultFilePath);
 }
 
 public class DeliveryService : IDeliveryService
 {
+    public void GenerateDeliveriesFile(string dronesAndLocationsFilePath, string deliveryResultFilePath)
+    {
+        var (drones, locations) = this.ReadFileDronesAndLocations(dronesAndLocationsFilePath);
+        var deliveries = this.GenerateDeliveries(drones, locations);
+        this.WriteDeliveryFile(deliveries, deliveryResultFilePath);
+    }
+    
     public List<DeliveryModel> GenerateDeliveries(List<DroneModel> drones, List<LocationModel> locations)
     {
         List<DeliveryModel> deliveries = drones.Select((drone, index) => new DeliveryModel()
